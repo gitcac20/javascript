@@ -112,3 +112,19 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(ci
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".card");
+  
+    cards.forEach((card) => {
+      card.addEventListener("mouseover", () => {
+        card.style.transform = "scale(1.1)"; 
+        card.style.transition = "transform 0.3s ease"; 
+      });
+  
+      card.addEventListener("mouseout", () => {
+        card.style.transform = "scale(1)"; 
+      });
+    });
+  });
+  

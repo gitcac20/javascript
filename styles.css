@@ -17,7 +17,7 @@ header {
   top: 0;
   z-index: 1000;
   
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: sombra para destacar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
   padding: 10px 20px;
 }
 
@@ -32,7 +32,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #000000;
+  color: hsl(0, 0%, 0%);
   text-decoration: none;
 }
 
@@ -46,7 +46,7 @@ section:nth-child(even) {
 }
 
 section h2 {
-  color: #333;
+  color: hsl(0, 0%, 20%);
 }
 
 /* Formulario */
@@ -129,24 +129,43 @@ button.success {
   padding: 0rem;
   margin: 0rem;
 }
-.tar{
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; /* Opcional: para distribuir el espacio entre los elementos */
-}
 
 .linea div {
-    margin: 0 10px; /* Opcional: para agregar espacio entre los elementos */
+    margin: 0 10px; 
 }
-
-
-
 
 .card{
-  width: 18rem;
-
+  width: 100%; 
+  max-width: 18rem; 
+  margin: 0 auto; 
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.card:hover {
+  cursor: pointer; 
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 16rem; 
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    max-width: 14rem; 
+  }
+}
+.card img {
+  width: 100%;
+  height: auto; 
+  object-fit: cover; 
+}
+
+
 
 
 
